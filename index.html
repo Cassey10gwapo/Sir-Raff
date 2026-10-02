@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Teachers' Day, Sir Raff! | PATHFit</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --board:#1f3a35; --board2:#18302c; --chalk:#f5f3ec; --yellow:#f2c94c; --pink:#f28fa0; --wood:#9a6b3f;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Nunito',system-ui,sans-serif; color:var(--chalk); line-height:1.6;
+  background:radial-gradient(circle at 30% 20%,var(--board),var(--board2)); min-height:100vh;
+  border-bottom:14px solid var(--wood);
+}
+.wrap{max-width:900px;margin:0 auto;padding:48px 20px 64px}
+h1,h2,.hand{font-family:'Caveat',cursive;font-weight:700}
+h1{font-size:clamp(2.8rem,9vw,5.2rem);line-height:1.05;text-align:center;color:var(--yellow);text-shadow:2px 2px 0 rgba(0,0,0,.25)}
+.sub{text-align:center;font-size:1.15rem;margin-top:10px;opacity:.9}
+
+.hero{display:flex;flex-direction:column;align-items:center;gap:28px;margin:40px 0 20px}
+.photo{
+  background:#fff;padding:14px 14px 48px;width:min(300px,80vw);transform:rotate(-3deg);
+  box-shadow:0 12px 30px rgba(0,0,0,.45);position:relative;color:#222;text-align:center
+}
+.photo::before{content:"";position:absolute;top:-12px;left:50%;width:70px;height:24px;margin-left:-35px;background:var(--pink);opacity:.85;transform:rotate(3deg)}
+.photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;background:#ddd}
+.photo .ph{display:none;aspect-ratio:4/5;background:#e8e8e8;align-items:center;justify-content:center;padding:20px;font-size:.95rem;color:#555}
+.photo.missing img{display:none}.photo.missing .ph{display:flex}
+.photo figcaption{position:absolute;bottom:10px;left:0;right:0;font-family:'Caveat',cursive;font-size:1.7rem}
+
+section{margin-top:56px}
+h2{font-size:2.4rem;color:var(--yellow);margin-bottom:14px}
+.letter{font-size:1.1rem;max-width:62ch;border-left:4px solid var(--pink);padding-left:20px}
+.letter p+p{margin-top:14px}
+
+.card{border:2px dashed rgba(245,243,236,.55);border-radius:6px;padding:22px 24px;max-width:460px}
+.card h3{font-family:'Caveat',cursive;font-size:1.9rem;color:var(--pink);margin-bottom:8px}
+.row{display:flex;justify-content:space-between;gap:16px;padding:6px 0;border-bottom:1px solid rgba(245,243,236,.2)}
+.row b{color:var(--yellow);font-family:'Caveat',cursive;font-size:1.5rem}
+
+form{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+input,textarea{font:inherit;padding:10px 12px;border-radius:4px;border:2px solid var(--chalk);background:transparent;color:var(--chalk)}
+input{flex:1 1 150px}textarea{flex:3 1 260px;resize:vertical;min-height:44px}
+input::placeholder,textarea::placeholder{color:rgba(245,243,236,.6)}
+button{font:inherit;font-weight:800;padding:10px 22px;border:0;border-radius:4px;background:var(--yellow);color:#2a2a2a;cursor:pointer}
+button:hover{background:#ffd966}
+:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
+.notes{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.note{background:var(--yellow);color:#2b2b2b;padding:16px;border-radius:2px;box-shadow:3px 4px 10px rgba(0,0,0,.35)}
+.note:nth-child(odd){transform:rotate(-1.5deg)}.note:nth-child(even){transform:rotate(1.5deg);background:#f7b8c2}
+.note p{font-family:'Caveat',cursive;font-size:1.45rem;line-height:1.25}
+.note small{display:block;margin-top:8px;font-weight:800}
+
+footer{margin-top:60px;text-align:center;font-family:'Caveat',cursive;font-size:1.6rem;opacity:.9}
+@media (prefers-reduced-motion:no-preference){
+  .photo{animation:drop .8s ease-out both}
+  @keyframes drop{from{transform:translateY(-40px) rotate(-12deg);opacity:0}to{transform:rotate(-3deg);opacity:1}}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <header class="hero">
+    <div>
+      <h1>Happy Teachers' Day, Sir Raff!</h1>
+      <p class="sub">From your BSIT 2A students, thank you for every step, stretch, and sayaw.</p>
+    </div>
+    <!-- Put your photo in the same folder as this file and name it sir-raff.jpg -->
+    <figure class="photo" id="photo">
+      <img src="sir-raff.jpg" alt="Sir Raff" onerror="document.getElementById('photo').classList.add('missing')">
+      <div class="ph">Add your photo here: save it as <b>&nbsp;sir-raff.jpg&nbsp;</b> next to index.html</div>
+      <figcaption>Sir Raff</figcaption>
+    </figure>
+  </header>
+
+  <section>
+    <h2>A message for you, Sir</h2>
+    <div class="letter">
+      <p>Dear Sir Raff,</p>
+      <p>Thank you for teaching us PATHFit, from the warm-ups to every folk dance step. You kept us moving, laughing, and trying again even when we were tired or kept missing the steps.</p>
+      <p>You made PE class something we looked forward to. What you taught us about teamwork, discipline, and staying active will stay with us long after the semester ends.</p>
+      <p>Happy Teachers' Day, Sir!</p><p class="hand" style="font-size:1.8rem;color:var(--pink)">- Your BSIT 2A Students</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sir Raff's PATHFit report card</h2>
+    <div class="card">
+      <h3>Graded by your students</h3>
+      <div class="row"><span>Patience with our two left feet</span><b>A+</b></div>
+      <div class="row"><span>Teaching folk dance steps</span><b>A+</b></div>
+      <div class="row"><span>Keeping the class energized</span><b>A+</b></div>
+      <div class="row"><span>Inspiring us to stay active</span><b>A+</b></div>
+      <div class="row"><span>Overall</span><b>Excellent!</b></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Leave a thank-you note</h2>
+    <form id="form">
+      <input id="name" placeholder="Your name" maxlength="30" required>
+      <textarea id="msg" placeholder="Write your message for Sir Raff" maxlength="140" required></textarea>
+      <button type="submit">Post note</button>
+    </form>
+    <div class="notes" id="notes">
+      <div class="note"><p>Thank you for the PATHFit and folk dance classes, Sir! Kapoy pero lingaw!</p><small>Your students</small></div>
+    </div>
+  </section>
+
+  <footer>Made with love by BSIT 2A for Sir Raff</footer>
+</main>
+
+<script>
+document.getElementById('form').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=document.getElementById('name'),m=document.getElementById('msg');
+  var d=document.createElement('div');d.className='note';
+  var p=document.createElement('p');p.textContent=m.value;
+  var s=document.createElement('small');s.textContent='– '+n.value;
+  d.append(p,s);
+  document.getElementById('notes').prepend(d);
+  n.value='';m.value='';
+});
+</script>
+</body>
+</html>
